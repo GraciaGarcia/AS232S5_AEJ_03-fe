@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "http://localhost:8086/api/aiome", // Ajusta el puerto si tu backend corre en otro
+const API = axios.create({
+  baseURL: "http://localhost:8086/api/aiome",
+  timeout: 10000,
 });
 
-export default api;
+export default API;
