@@ -6,10 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        APIURL: "https://ubiquitous-barnacle-69gv6x755gjq3r9px-8086.app.github.dev/api/aiome"
     image: 60071325/gracia-ia-frontend:latest
-    environment:
-      # URL del backend, se puede cambiar con variable de entorno si quieres
-      VITE_API_URL: "${BACKEND_URL:-https://ubiquitous-barnacle-69gv6x755gjq3r9px-8086.app.github.dev/api/aiome}"
     ports:
       - "80:80"
     restart: always
